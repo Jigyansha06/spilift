@@ -151,9 +151,9 @@ function initSmoothScroll() {
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loading');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Keep the loader visible long enough to register, without ever feeling like a forced wait.
-    const minDisplay = prefersReducedMotion ? 0 : 1600;
- 
+    // Hide as soon as the page has actually loaded — no artificial minimum wait.
+    const minDisplay = prefersReducedMotion ? 0 : 0;
+
     const hidePreloader = () => {
         const preloader = document.getElementById('preloader');
         if (!preloader || preloader.classList.contains('hidden')) return;
@@ -161,15 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('loading');
         initAnimations();
     };
- 
+
     window.addEventListener('load', () => {
         setTimeout(hidePreloader, minDisplay);
     });
- 
-    // Fallback in case the load event is delayed by slow third-party assets
-    setTimeout(hidePreloader, 3500);
+
+    // Fallback in case the load event is delayed by slow third-party assets.
+    // Kept comfortably above minDisplay (which counts from 'load', not this
+    // DOMContentLoaded-based timer) so it never fires before the page is ready.
+    setTimeout(hidePreloader, 2000);
 });
- 
+
 
 // === Advanced Particle System (3D depth) ===
 function initParticles() {
@@ -798,7 +800,7 @@ function initForm() {
             Message: form.message.value
         };
 
-        fetch("submit.php", {
+        fetch("/api/submit", {
             method: "POST",
             headers: { 
                 'Content-Type': 'application/json',
