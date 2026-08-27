@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SPILIFT — Elevate your brand with strategic PR & digital growth. Get featured on top media platforms, build a powerful online presence, and grow your business with data-driven marketing solutions.">
+    <meta name="keywords" content="digital marketing, public relations, branding, SEO, social media marketing, press releases, media outreach, SPILIFT">
+    <meta name="author" content="SPILIFT">
+    <meta property="og:title" content="SPILIFT — Strategic PR & Digital Growth">
+    <meta property="og:description" content="Get featured on top media platforms, build a powerful online presence, and grow your business with data-driven marketing solutions.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>SPILIFT — Strategic PR & Digital Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-wrap">
+            <div class="loader-circle">
+                <img src="logo.png" alt="SPILIFT" class="loader-mark">
+            </div>
+            <p class="loader-text">SPILIFT MEDIA</p>
+        </div>
+    </div>
+
+    <!-- Floating 3D Background Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logo">
+                <div class="logo-icon-wrap">
+                    <img src="logo.png" alt="SPILIFT Logo" class="logo-img">
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#media-coverage" class="nav-link">Media Coverage</a></li>
+                <li><a href="#press-releases" class="nav-link">Press Releases</a></li>
+                <li><a href="#magazines" class="nav-link">Magazines</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Featured</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#why-us" class="mobile-link">Why Us</a></li>
+            <li><a href="#media-coverage" class="mobile-link">Media Coverage</a></li>
+            <li><a href="#press-releases" class="mobile-link">Press Releases</a></li>
+            <li><a href="#magazines" class="mobile-link">Magazines</a></li>
+            <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+            <li><a href="#contact" class="mobile-cta">Get Featured →</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-up">
+                    <span class="badge-dot"></span>
+                    #1 PR & Digital Growth Agency
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    Elevate Your Brand with 
+                    <span class="gradient-text">Strategic PR</span> & 
+                    <span class="gradient-text">Digital Growth</span>
+                </h1>
+                <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                    Get featured on top media platforms, build a powerful online presence, 
+                    and grow your business with data-driven marketing solutions.
+                </p>
+                <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                    <a href="#contact" class="btn btn-primary btn-3d">
+                        <span>Get Featured Now</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#services" class="btn btn-glass">
+                        <span>Our Services</span>
+                    </a>
+                </div>
+                <div class="hero-clients" data-animate="fade-up" data-delay="400">
+                    <div class="client-avatars">
+                        <div class="avatar" style="background: linear-gradient(135deg, #FF6B35, #ff9a5c);">A</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #0A2540, #1a4a7a);">B</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #FF6B35, #ff9a5c);">C</div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #0A2540, #1a4a7a);">D</div>
+                        <div class="avatar avatar-count">+496</div>
+                    </div>
+                    <p class="client-text">Trusted by <strong>500+</strong> brands worldwide</p>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate="fade-left" data-delay="200">
+                <div class="hero-3d-card">
+                    <div class="card-3d-inner">
+                        <div class="hero-sphere"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-animate="fade-up" data-delay="500">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-1"></div>
+            <div class="bg-orb bg-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-animate="fade-up">
+                    <div class="stat-3d-wrap">
+                        <div class="stat-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="stat-number" data-target="500" data-suffix="+">0</div>
+                        <div class="stat-label">Brands Served</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="100">
+                    <div class="stat-3d-wrap">
+                        <div class="stat-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2M18 14h-8M15 18h-5"/><path d="M10 6h8v4h-8z"/></svg>
+                        </div>
+                        <div class="stat-number" data-target="1000" data-suffix="+">0</div>
+                        <div class="stat-label">Media Placements</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="200">
+                    <div class="stat-3d-wrap">
+                        <div class="stat-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <div class="stat-number" data-target="50" data-suffix="M+">0</div>
+                        <div class="stat-label">Audience Reach</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-animate="fade-up" data-delay="300">
+                    <div class="stat-3d-wrap">
+                        <div class="stat-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="stat-number" data-target="5" data-suffix="+">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner 1 -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h3>Ready to Get Featured on Top Media Platforms?</h3>
+                <p>Join 500+ brands that trust SPILIFT for their PR & digital growth.</p>
+                <a href="#contact" class="btn btn-primary btn-3d">Get Featured Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-3"></div>
+            <div class="bg-orb bg-orb-4"></div>
+            <div class="bg-line bg-line-1"></div>
+            <div class="bg-line bg-line-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+                <p class="section-subtitle">Comprehensive solutions to elevate your brand across every platform</p>
+            </div>
+            <div class="services-grid">
+                <!-- Public Relations -->
+                <div class="service-card service-3d" data-animate="fade-up" data-delay="0">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-wrap">
+                                <div class="service-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H8a2 2 0 00-2 2v16a2 2 0 01-2 2zm0 0a2 2 0 01-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M10 6h8v4h-8z"/><path d="M18 14h-8M15 18h-5"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Public Relations</h3>
+                            <p class="service-desc">Build credibility through strategic media placements and press coverage.</p>
+                            <ul class="service-features">
+                                <li><span class="check">✦</span> News Articles</li>
+                                <li><span class="check">✦</span> Press Releases</li>
+                                <li><span class="check">✦</span> Media Outreach</li>
+                                <li><span class="check">✦</span> Personal Branding</li>
+                            </ul>
+                            <div class="service-hover-hint">Hover to explore →</div>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Public Relations</h3>
+                            <p>We craft compelling narratives and secure placements on top-tier media outlets to boost your brand authority and credibility.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="service-card service-3d" data-animate="fade-up" data-delay="100">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-wrap">
+                                <div class="service-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Digital Marketing</h3>
+                            <p class="service-desc">Data-driven campaigns across all digital channels for maximum ROI.</p>
+                            <ul class="service-features">
+                                <li><span class="check">✦</span> Social Media Marketing</li>
+                                <li><span class="check">✦</span> Google & Meta Ads</li>
+                                <li><span class="check">✦</span> UGC Video Production</li>
+                                <li><span class="check">✦</span> Business Websites & SEO</li>
+                            </ul>
+                            <div class="service-hover-hint">Hover to explore →</div>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Digital Marketing</h3>
+                            <p>From social media and paid ads to SEO and web development — we cover every digital touchpoint to accelerate your growth.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branding -->
+                <div class="service-card service-3d" data-animate="fade-up" data-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-wrap">
+                                <div class="service-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Branding</h3>
+                            <p class="service-desc">Create a memorable brand identity that resonates with your audience.</p>
+                            <ul class="service-features">
+                                <li><span class="check">✦</span> Logo Design</li>
+                                <li><span class="check">✦</span> Brand Identity</li>
+                                <li><span class="check">✦</span> Content Creation</li>
+                                <li><span class="check">✦</span> Visual Strategy</li>
+                            </ul>
+                            <div class="service-hover-hint">Hover to explore →</div>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Branding</h3>
+                            <p>We build cohesive brand identities — from logo to content strategy — that tell your story and connect emotionally with your audience.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photography/Videography -->
+                <div class="service-card service-3d" data-animate="fade-up" data-delay="300">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <div class="service-icon-wrap">
+                                <div class="service-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title">Photography & Videography</h3>
+                            <p class="service-desc">Professional shoots that capture your brand's essence perfectly.</p>
+                            <ul class="service-features">
+                                <li><span class="check">✦</span> Ad Shoots</li>
+                                <li><span class="check">✦</span> Pre-Wedding & Wedding</li>
+                                <li><span class="check">✦</span> Model & Car Delivery Shoots</li>
+                                <li><span class="check">✦</span> Event Videography</li>
+                            </ul>
+                            <div class="service-hover-hint">Hover to explore →</div>
+                        </div>
+                        <div class="service-card-back">
+                            <h3>Photography & Videography</h3>
+                            <p>From high-energy ad shoots to cinematic wedding films — we capture every moment with professional equipment and creative vision.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Get Started →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="why-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-5"></div>
+            <div class="bg-orb bg-orb-6"></div>
+            <div class="bg-ring bg-ring-1"></div>
+            <div class="bg-dots"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Our Edge</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">SPILIFT</span>?</h2>
+                <p class="section-subtitle">We don't just deliver services — we deliver results that transform businesses</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-animate="fade-up" data-delay="0">
+                    <div class="why-card-3d">
+                        <div class="why-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <h3>Fast Turnaround</h3>
+                        <p>We move at the speed of business. Quick delivery without compromising quality — because timing is everything in PR.</p>
+                        <div class="why-number">01</div>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="100">
+                    <div class="why-card-3d">
+                        <div class="why-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3>Growth-Focused Strategy</h3>
+                        <p>Every campaign is engineered for measurable growth. We combine creativity with data to maximize your ROI.</p>
+                        <div class="why-number">02</div>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="200">
+                    <div class="why-card-3d">
+                        <div class="why-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Strong Media Network</h3>
+                        <p>Our established relationships with 100+ top-tier media outlets guarantee your story gets the coverage it deserves.</p>
+                        <div class="why-number">03</div>
+                    </div>
+                </div>
+                <div class="why-card" data-animate="fade-up" data-delay="300">
+                    <div class="why-card-3d">
+                        <div class="why-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        </div>
+                        <h3>Dedicated Support</h3>
+                        <p>Your personal account manager and 24/7 support ensure you're never left in the dark. We're partners, not vendors.</p>
+                        <div class="why-number">04</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner 2 -->
+    <section class="cta-banner cta-dark">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h3>Your Competitors Are Already Getting Featured. Are You?</h3>
+                <p>Don't let your brand fall behind. Start your PR journey today.</p>
+                <a href="#contact" class="btn btn-primary btn-3d">Get Featured Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Coverage Gallery -->
+    <section id="media-coverage" class="media-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-7"></div>
+            <div class="bg-orb bg-orb-8"></div>
+            <div class="bg-line bg-line-3"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Press Coverage</span>
+                <h2 class="section-title">Media <span class="gradient-text">Coverage</span></h2>
+                <p class="section-subtitle">Our clients have been featured on leading publications worldwide</p>
+            </div>
+            <div class="media-logos" data-animate="fade-up" data-delay="100">
+                <div class="media-logo-track">
+                    <div class="media-logo-item"><img src="forbes.svg" alt="Forbes" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="bloomberg.svg" alt="Bloomberg" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="insider.svg" alt="Business Insider" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="techcrunch.svg" alt="TechCrunch" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="entrepreneur.svg" alt="Entrepreneur" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="yahoofinance.svg" alt="Yahoo Finance" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="ndtv.svg" alt="NDTV" loading="lazy"></div>
+                    <div class="media-logo-item"><img src="timesofindia.svg" alt="Times of India" loading="lazy"></div>
+                    <!-- Duplicate for seamless scroll -->
+                    <div class="media-logo-item" aria-hidden="true"><img src="forbes.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="bloomberg.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="insider.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="techcrunch.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="entrepreneur.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="yahoofinance.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="ndtv.svg" alt="" loading="lazy"></div>
+                    <div class="media-logo-item" aria-hidden="true"><img src="timesofindia.svg" alt="" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Releases Section -->
+    <section id="press-releases" class="press-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-9"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Campaigns</span>
+                <h2 class="section-title">Press <span class="gradient-text">Releases</span></h2>
+                <p class="section-subtitle">A look at our published campaigns, grouped by format</p>
+            </div>
+            <div class="press-tabs" data-animate="fade-up" data-delay="100" role="tablist" aria-label="Campaign type">
+                <button type="button" class="press-tab active" data-tab="group" role="tab" aria-selected="true" aria-controls="groupPanel" id="tabGroup">Group Campaigns</button>
+                <button type="button" class="press-tab" data-tab="solo" role="tab" aria-selected="false" aria-controls="soloPanel" id="tabSolo">Solo Campaigns</button>
+            </div>
+            <div class="press-panel active" id="groupPanel" data-panel="group" role="tabpanel" aria-labelledby="tabGroup">
+                <div class="press-list" id="groupCampaignsList"></div>
+            </div>
+            <div class="press-panel" id="soloPanel" data-panel="solo" role="tabpanel" aria-labelledby="tabSolo">
+                <div class="press-list" id="soloCampaignsList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magazines Section -->
+    <section id="magazines" class="magazines-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-11"></div>
+        </div>
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Publications</span>
+                <h2 class="section-title"><span class="gradient-text">Magazines</span></h2>
+                <p class="section-subtitle">Our featured print and digital publications</p>
+            </div>
+            <div id="magazinesList" data-animate="fade-up" data-delay="100"></div>
+        </div>
+    </section>
+
+    <!-- CTA Banner 3 -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content" data-animate="fade-up">
+                <h3>Ready to Get Featured Next?</h3>
+                <p>Book a free consultation and discover your growth potential.</p>
+                <a href="#contact" class="btn btn-primary btn-3d">Get Featured Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Client Love</span>
+                <h2 class="section-title">What Our <span class="gradient-text">Clients</span> Say</h2>
+                <p class="section-subtitle">Real feedback from real brands we've helped grow</p>
+            </div>
+            <div class="testimonials-carousel" data-animate="fade-up" data-delay="100">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-3d">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"SPILIFT transformed our brand visibility overnight. We went from zero media presence to being featured on Forbes and Business Insider within 3 weeks. Absolutely game-changing!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #FF6B35, #ff9a5c);">RK</div>
+                                <div class="author-info">
+                                    <strong>Rahul Kapoor</strong>
+                                    <span>CEO, TechVista Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-3d">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"The ROI from SPILIFT's Google Ads campaign was unbelievable — 5x return in just 2 months. Their team understands digital growth like no one else. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #0A2540, #1a4a7a);">PM</div>
+                                <div class="author-info">
+                                    <strong>Priya Mehta</strong>
+                                    <span>Founder, StyleBox India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-3d">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"We needed a complete rebrand and SPILIFT delivered beyond expectations. New logo, brand identity, and a website that converts. Our revenue jumped 200% in 6 months."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #FF6B35, #ff9a5c);">AS</div>
+                                <div class="author-info">
+                                    <strong>Amit Sharma</strong>
+                                    <span>Director, LuxeHomes Group</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-3d">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Their wedding video team is incredible! The cinematic quality and attention to detail made our special day truly unforgettable. The ad shoot for my business was equally professional."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #0A2540, #1a4a7a);">NK</div>
+                                <div class="author-info">
+                                    <strong>Neha Kulkarni</strong>
+                                    <span>Entrepreneur & Influencer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-3d">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"SPILIFT's social media marketing completely changed our game. From 2K to 50K followers in 3 months with genuine engagement. They truly understand audience growth."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar" style="background: linear-gradient(135deg, #FF6B35, #ff9a5c);">VR</div>
+                                <div class="author-info">
+                                    <strong>Vikram Rathore</strong>
+                                    <span>Co-founder, FitZone App</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next testimonial">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Consultation Form -->
+    <section id="contact" class="contact-section">
+        <div class="section-bg-accents">
+            <div class="bg-orb bg-orb-10"></div>
+            <div class="bg-orb bg-orb-11"></div>
+            <div class="bg-line bg-line-4"></div>
+            <div class="bg-dots bg-dots-2"></div>
+        </div>
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <span class="section-tag">Let's Talk</span>
+                    <h2 class="section-title">Free <span class="gradient-text">Consultation</span></h2>
+                    <p class="contact-desc">Ready to elevate your brand? Fill out the form and our team will reach out within 24 hours with a custom growth strategy.</p>
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <div class="cf-icon">🎯</div>
+                            <div>
+                                <strong>Custom Strategy</strong>
+                                <p>Tailored plan for your brand goals</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="cf-icon">📊</div>
+                            <div>
+                                <strong>Free Brand Audit</strong>
+                                <p>Comprehensive analysis of your current presence</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <div class="cf-icon">💡</div>
+                            <div>
+                                <strong>Expert Consultation</strong>
+                                <p>30-min call with our PR specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap" data-animate="fade-left" data-delay="100">
+                    <form class="contact-form" id="consultationForm">
+                        <div class="form-3d">
+                            <h3 class="form-title">Get Your Free Growth Strategy</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Service Interested In</label>
+                                    <select id="service" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="pr">Public Relations</option>
+                                        <option value="digital">Digital Marketing</option>
+                                        <option value="branding">Branding</option>
+                                        <option value="photography">Photography/Videography</option>
+                                        <option value="all">All Services</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group full">
+                                <label for="message">Tell Us About Your Brand</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your brand and what you're looking to achieve..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-3d btn-full" id="submitBtn">
+                                <span>Book Free Consultation</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+                            <p class="form-note">🔒 Your information is secure. We'll never share your data.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="logo.png" alt="SPILIFT" class="footer-logo">
+                    </a>
+                    <p>Elevating brands through strategic PR, digital marketing, and creative solutions. Your growth is our mission.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C16.67.014 16.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Public Relations</a></li>
+                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="#services">Branding</a></li>
+                        <li><a href="#services">Photography</a></li>
+                        <li><a href="#services">SEO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#why-us">About Us</a></li>
+                        <li><a href="#media-coverage">Media Coverage</a></li>
+                        <li><a href="#press-releases">Press Releases</a></li>
+                        <li><a href="#magazines">Magazines</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:spiliftmedia@gmail.com">spiliftmedia@gmail.com</a></li>
+                        <li><a href="tel:+917751936060">+91 77519 36060</a></li>
+                        <li><span>Mumbai, India</span></li>
+                        <li><span>Bhubaneswar, Odisha</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SPILIFT. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917751936060?text=Hi%20SPILIFT!%20I'm%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" id="whatsappBtn">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h3>Thank You!</h3>
+            <p>Your consultation request has been received. Our team will contact you within 24 hours.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('successModal').classList.remove('active')">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
