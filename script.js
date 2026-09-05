@@ -13,12 +13,15 @@ const PRESS_RELEASES = {
     group: [
         { title: "The PR House Presents: Mentors of Impact — India's Top Coaches 2026", publication: "Ahmedabad Mirror", cover: "mentors-of-impact.jpeg", url: "https://www.ahmedabadmirror.com/the-pr-house-presents-mentors-of-impact-indias-top-coaches-2026/81906408.html" },
         { title: "10 Inspiring Women Personalities to Watch Out for This Women's Day", publication: "Mid-Day", cover: "inspiring-women-2026.jpeg", url: "https://www.mid-day.com/buzzfeed/article/10-inspiring-women-personalities-to-watch-out-for-this-women-s-day-2026-9127#google_vignette" },
-        { title: "Top Astrologers and Tarot Card Readers to Watch Out in 2026", publication: "Ahmedabad Mirror", cover: "top-astrologers-tarot-readers.jpeg", url: "https://ahmedabadmirror.com/top-astrologers-and-tarot-card-readers-to-watch-out-in-2026/81917183.html" }
+        { title: "Top Astrologers and Tarot Card Readers to Watch Out in 2026", publication: "Ahmedabad Mirror", cover: "top-astrologers-tarot-readers.jpeg", url: "https://ahmedabadmirror.com/top-astrologers-and-tarot-card-readers-to-watch-out-in-2026/81917183.html" },
+        { title: "9 Must-Read Books in 2026", publication: "Mid-Day", cover: "must-read-books-2026.jpeg", url: "https://www.mid-day.com/amp/buzz/article/9-must-read-books-of-2026-9597" }
+
     ],
     solo: [
         { title: "Sayantani Putatunda: The Author With Beauty, Brains and a Hammer", publication: "Ahmedabad Mirror", cover: "sayantani-putatunda.jpeg", url: "https://www.ahmedabadmirror.com/sayantani-putatunda-the-author-with-beauty-brains-and-a-hammer/81892411.html#goog_rewarded" },
         { title: "Pooja Jaisingh: The Visionary Bridging Luxury, Influence & Global Brand Narratives", publication: "Mid-Day", cover: "pooja-jaisingh.jpeg", url: "https://www.mid-day.com/buzzfeed/article/pooja-jaisingh-the-visionary-bridging-luxury-influence-and-global-brand-narratives-9932" },
         { title: "Dr. Shivani Mayekar Rao: Crafting Smiles, Empowering Lives", publication: "Mid-Day", cover: "dr-shivani-mayekar-rao.jpeg", url: "https://www.mid-day.com/buzz/article/dr-shivani-mayekar-rao-crafting-smiles-empowering-lives-8577" }
+        
     ]
 };
 
