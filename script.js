@@ -5,29 +5,33 @@
    ============================================ */
 
 // === Press Releases Data ===
-// Replace PASTE_LINK_HERE with the real campaign URL for each entry.
-// Add or remove entries freely — the list renders automatically.
+// Each entry now carries a title, publication name, and optional cover
+// thumbnail — set 'cover' to an image path (e.g. "assets/campaigns/xyz.jpg")
+// to replace the placeholder with a real image. The 'url' fields below are
+// unchanged from before.
 const PRESS_RELEASES = {
     group: [
-        { label: "Group Campaign 01", url: "https://www.ahmedabadmirror.com/the-pr-house-presents-mentors-of-impact-indias-top-coaches-2026/81906408.html" },
-        { label: "Group Campaign 02", url: "https://www.mid-day.com/buzzfeed/article/10-inspiring-women-personalities-to-watch-out-for-this-women-s-day-2026-9127#google_vignette" },
-        { label: "Group Campaign 03", url: "https://ahmedabadmirror.com/top-astrologers-and-tarot-card-readers-to-watch-out-in-2026/81917183.html" }
+        { title: "The PR House Presents: Mentors of Impact — India's Top Coaches 2026", publication: "Ahmedabad Mirror", cover: "mentors-of-impact.jpeg", url: "https://www.ahmedabadmirror.com/the-pr-house-presents-mentors-of-impact-indias-top-coaches-2026/81906408.html" },
+        { title: "10 Inspiring Women Personalities to Watch Out for This Women's Day", publication: "Mid-Day", cover: "inspiring-women-2026.jpeg", url: "https://www.mid-day.com/buzzfeed/article/10-inspiring-women-personalities-to-watch-out-for-this-women-s-day-2026-9127#google_vignette" },
+        { title: "Top Astrologers and Tarot Card Readers to Watch Out in 2026", publication: "Ahmedabad Mirror", cover: "top-astrologers-tarot-readers.jpeg", url: "https://ahmedabadmirror.com/top-astrologers-and-tarot-card-readers-to-watch-out-in-2026/81917183.html" }
     ],
     solo: [
-        { label: "Solo Campaign 01", url: "https://www.ahmedabadmirror.com/sayantani-putatunda-the-author-with-beauty-brains-and-a-hammer/81892411.html#goog_rewarded" },
-        { label: "Solo Campaign 02", url: "https://www.mid-day.com/buzzfeed/article/pooja-jaisingh-the-visionary-bridging-luxury-influence-and-global-brand-narratives-9932" },
-        { label: "Solo Campaign 03", url: "https://www.mid-day.com/buzz/article/dr-shivani-mayekar-rao-crafting-smiles-empowering-lives-8577" }
+        { title: "Sayantani Putatunda: The Author With Beauty, Brains and a Hammer", publication: "Ahmedabad Mirror", cover: "sayantani-putatunda.jpeg", url: "https://www.ahmedabadmirror.com/sayantani-putatunda-the-author-with-beauty-brains-and-a-hammer/81892411.html#goog_rewarded" },
+        { title: "Pooja Jaisingh: The Visionary Bridging Luxury, Influence & Global Brand Narratives", publication: "Mid-Day", cover: "pooja-jaisingh.jpeg", url: "https://www.mid-day.com/buzzfeed/article/pooja-jaisingh-the-visionary-bridging-luxury-influence-and-global-brand-narratives-9932" },
+        { title: "Dr. Shivani Mayekar Rao: Crafting Smiles, Empowering Lives", publication: "Mid-Day", cover: "dr-shivani-mayekar-rao.jpeg", url: "https://www.mid-day.com/buzz/article/dr-shivani-mayekar-rao-crafting-smiles-empowering-lives-8577" }
     ]
 };
 
 // === Magazines Data ===
 // Replace cover and link with the real image path/URL when available.
+// 'instagram' is optional — set it to the magazine's Instagram profile URL
+// to show a small Instagram icon next to "View Magazine".
 const MAGAZINES = [
     {
-        title: "Magazine",
-        issue: "Issue 01",
+        title: "GLORIOUS INDIA MAGAZINE",
         cover: "cover page.webp",
-        link: "https://gloriousindiamagazine.in/"
+        link: "https://gloriousindiamagazine.in/",
+        instagram: "https://www.instagram.com/gloriousindiamagazine/"
     }
 ];
 
@@ -46,15 +50,28 @@ function renderPressReleases() {
 
         container.innerHTML = items.map((item, i) => {
             const num = String(i + 1).padStart(2, '0');
-            const href = isPlaceholder(item.url) ? '#' : item.url;
-            const disabledAttrs = isPlaceholder(item.url)
+            const placeholder = isPlaceholder(item.url);
+            const href = placeholder ? '#' : item.url;
+            const disabledAttrs = placeholder
                 ? ' aria-disabled="true" tabindex="-1" onclick="return false;"'
                 : ' target="_blank" rel="noopener noreferrer"';
+            const hasCover = item.cover && item.cover !== 'PASTE_COVER_HERE';
+            const thumbInner = hasCover
+                ? `<img src="${item.cover}" alt="${item.title}" loading="lazy">`
+                : `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>${item.publication || 'SPILIFT'}</span>`;
             return `
-                <a class="press-row" href="${href}"${disabledAttrs} aria-label="${item.label}">
-                    <span class="press-row-num">${num}</span>
-                    <span class="press-row-label">${item.label}</span>
-                    <svg class="press-row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <a class="press-row" href="${href}"${disabledAttrs} aria-label="${item.title}">
+                    <div class="press-row-thumb${hasCover ? '' : ' placeholder'}">
+                        ${thumbInner}
+                        <span class="press-row-num">${num}</span>
+                    </div>
+                    <div class="press-row-body">
+                        ${item.publication ? `<span class="press-row-pub">${item.publication}</span>` : ''}
+                        <span class="press-row-label">${item.title}</span>
+                        <span class="press-row-cta">View Campaign
+                            <svg class="press-row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
                 </a>`;
         }).join('');
     }
@@ -92,18 +109,26 @@ function renderMagazines() {
         const linkAttrs = hasLink
             ? `href="${mag.link}" target="_blank" rel="noopener noreferrer"`
             : `href="#" aria-disabled="true" tabindex="-1" onclick="return false;"`;
+        const hasInstagram = mag.instagram && mag.instagram !== 'PASTE_INSTAGRAM_HERE';
+        const instagramHtml = hasInstagram
+            ? `<a class="magazine-instagram" href="${mag.instagram}" target="_blank" rel="noopener noreferrer" aria-label="${mag.title} on Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+               </a>`
+            : '';
 
         return `
             <div class="magazine-card">
                 <div class="magazine-cover">${coverHtml}</div>
                 <div class="magazine-info">
-                    <span class="magazine-issue">${mag.issue}</span>
                     <h3 class="magazine-title">${mag.title}</h3>
                     <p class="magazine-desc">Explore our latest issue, featuring insights and stories from the SPILIFT team.</p>
-                    <a class="btn btn-primary btn-3d" ${linkAttrs}>
-                        <span>View Magazine</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
+                    <div class="magazine-actions">
+                        <a class="btn btn-primary btn-3d" ${linkAttrs}>
+                            <span>View Magazine</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        ${instagramHtml}
+                    </div>
                 </div>
             </div>`;
     }).join('');
@@ -657,7 +682,7 @@ function initCarousel() {
 // === Premium 3D Tilt Effect ===
 function initTiltEffect() {
     if (window.innerWidth <= 768) return;
-    const tiltElements = document.querySelectorAll('.stat-3d-wrap, .why-card-3d, .case-card-3d, .testimonial-3d, .form-3d');
+    const tiltElements = document.querySelectorAll('.stat-3d-wrap, .why-card-3d, .case-card-3d, .testimonial-3d, .form-3d, .press-row');
     
     tiltElements.forEach(el => {
         let currentRotateX = 0;
@@ -1031,7 +1056,7 @@ function initCursorGlow() {
     let glowX = 0, glowY = 0;
     let isHoveringInteractive = false;
 
-    const interactiveSelectors = '.btn, .nav-link, .nav-cta, .social-link, .footer-socials a, .carousel-btn, .hamburger, .whatsapp-float, .back-to-top, .press-row, .press-tab, .media-logo-item';
+    const interactiveSelectors = '.btn, .nav-link, .nav-cta, .social-link, .footer-socials a, .carousel-btn, .hamburger, .whatsapp-float, .back-to-top, .press-row, .press-tab, .media-logo-item, .magazine-instagram';
 
     document.addEventListener('mousemove', (e) => {
         curX = e.clientX;
