@@ -34,7 +34,7 @@ const MAGAZINES = [
         title: "GLORIOUS INDIA MAGAZINE",
         cover: "cover page.webp",
         link: "https://gloriousindiamagazine.in/",
-        instagram: "https://www.instagram.com/gloriousindiamagazine/"
+        instagram: "https://www.instagram.com/__gloriousindiamagazine__?igsi=ZHUyeXFtcWVpeDNu"
     }
 ];
 
