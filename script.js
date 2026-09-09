@@ -175,31 +175,40 @@ function initSmoothScroll() {
     }
 }
 
+
 // === Preloader ===
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loading');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    // Hide as soon as the page has actually loaded — no artificial minimum wait.
-    const minDisplay = prefersReducedMotion ? 0 : 0;
+
+    const prefersReducedMotion =
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Loader display time
+    const minDisplay = prefersReducedMotion ? 500 : 900;
+
+    const startTime = Date.now();
 
     const hidePreloader = () => {
         const preloader = document.getElementById('preloader');
+
         if (!preloader || preloader.classList.contains('hidden')) return;
-        preloader.classList.add('hidden');
-        document.body.classList.remove('loading');
-        initAnimations();
+
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minDisplay - elapsed);
+
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            document.body.classList.remove('loading');
+            initAnimations();
+        }, remaining);
     };
 
-    window.addEventListener('load', () => {
-        setTimeout(hidePreloader, minDisplay);
-    });
+    // Hide after page is loaded
+    window.addEventListener('load', hidePreloader);
 
-    // Fallback in case the load event is delayed by slow third-party assets.
-    // Kept comfortably above minDisplay (which counts from 'load', not this
-    // DOMContentLoaded-based timer) so it never fires before the page is ready.
-    setTimeout(hidePreloader, 2000);
+    // Safety fallback
+    setTimeout(hidePreloader, 5000);
 });
-
 
 // === Advanced Particle System (3D depth) ===
 function initParticles() {

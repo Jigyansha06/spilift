@@ -122,7 +122,21 @@
                     </div>
                 </div>
             </div>
+            <!-- 3D Rocket Launch Animation — fills the existing space below
+                 the hero content and above the stats section. Spans the full
+                 grid width as its own row. Self-contained in rocket.js. -->
+            <div class="rocket-scene" id="rocketScene">
+                <canvas id="rocketCanvas" aria-hidden="true"></canvas>
+                <div class="rocket-caption">
+                    <span class="rocket-caption-uplift" id="rocketUplift">UPLIFT</span>
+                    <span class="rocket-caption-full" id="rocketFull">
+                        <span class="rocket-caption-sub">Uplift with</span>
+                        <span class="rocket-caption-brand">SPILIFT</span>
+                    </span>
+                </div>
+            </div>
         </div>
+
         <div class="scroll-indicator" data-animate="fade-up" data-delay="500">
             <div class="mouse">
                 <div class="wheel"></div>
@@ -753,5 +767,9 @@
     <!-- Lenis Smooth Scroll CDN -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- 3D Rocket Launch Animation (hero section) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="rocket.js" defer></script>
 </body>
 </html>
