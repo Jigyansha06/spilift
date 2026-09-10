@@ -799,9 +799,9 @@ body::before {
 
 /* Hero Visual / 3D Cards */
 .hero-visual {
-    position: relative;
-    height: 520px;
-    perspective: var(--perspective);
+    /* Superseded by #rocketScene, which now occupies this role
+       (right column on desktop, vertical slot on mobile). */
+    display: none;
 }
 
 .hero-3d-card {
@@ -2865,6 +2865,7 @@ section.section-visible {
 
     .hero-container {
         padding: 0 16px;
+        padding-bottom: 24px; /* .scroll-indicator is hidden below 768px */
     }
 
     .hero-title {
@@ -3956,13 +3957,16 @@ section.section-visible {
    height beyond what the hero section already reserves.
    ============================================================ */
 .rocket-scene {
-    grid-column: 1 / -1;
+    /* Desktop: occupies the right column (grid-column 2), in the same
+       row as .hero-content — this is the existing right-side space
+       that .hero-visual used to occupy. Overridden to full-width below
+       once the layout collapses to a single column. */
+    grid-column: 2;
+    grid-row: 1;
     position: relative;
     width: 100%;
-    height: clamp(260px, 34vh, 460px);
-    margin-top: 12px;
-    border-radius: 24px;
-    overflow: hidden;
+    height: 100%;
+    min-height: 480px;
     pointer-events: none;
 }
 
@@ -3977,9 +3981,11 @@ section.section-visible {
     inset: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+    text-align: center;
     gap: 6px;
+    padding-bottom: 8%;
     z-index: 2;
     pointer-events: none;
 }
@@ -3988,7 +3994,8 @@ section.section-visible {
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: clamp(28px, 4vw, 48px);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: var(--white);
     text-shadow: 0 0 30px rgba(255, 107, 53, 0.45);
     opacity: 0;
@@ -4008,8 +4015,10 @@ section.section-visible {
 
 .rocket-caption-full {
     display: flex;
-    align-items: baseline;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
     opacity: 0;
     transform: translateY(14px);
     transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
@@ -4021,38 +4030,47 @@ section.section-visible {
 }
 
 .rocket-caption-sub {
-    font-family: var(--font-body, inherit);
-    font-weight: 400;
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-style: italic;
     font-size: clamp(15px, 1.8vw, 20px);
-    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .rocket-caption-brand {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: clamp(20px, 2.6vw, 30px);
-    letter-spacing: 0.02em;
+    font-size: clamp(26px, 3.4vw, 38px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--orange-light);
     text-shadow: 0 0 24px rgba(255, 107, 53, 0.4);
 }
 
 @media (max-width: 1024px) {
     .rocket-scene {
-        height: clamp(220px, 30vh, 360px);
-        margin-top: 0;
+        /* Layout has collapsed to a single column — the rocket can no
+           longer sit "beside" the content (there's no right column
+           left), so it moves to its own full-width row below it. */
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: clamp(360px, 50vh, 560px);
+        min-height: 0;
+        margin: 12px 0 120px; /* clears the .scroll-indicator */
     }
 }
 
 @media (max-width: 768px) {
     .rocket-scene {
-        height: clamp(200px, 26vh, 300px);
+        height: clamp(320px, 46vh, 480px);
+        margin-bottom: 20px; /* .scroll-indicator is hidden below 768px */
     }
 }
 
 @media (max-width: 480px) {
     .rocket-scene {
-        height: clamp(180px, 24vh, 260px);
-        border-radius: 18px;
+        height: clamp(280px, 42vh, 400px);
     }
 }
 
